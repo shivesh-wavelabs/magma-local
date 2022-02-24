@@ -2,8 +2,8 @@
 
 set -e
 
-CONTROLLER_IMAGE="docker.artifactory.magmacore.org/controller"
-CONTROLLER_TAG="1.6.1"
+CONTROLLER_IMAGE="shiveshwavelabs/controller"
+CONTROLLER_TAG="master-feb"
 DOMAIN_NAME=magmalocal.com
 CERTS_CHART=true
 
@@ -11,8 +11,8 @@ CERTS_CHART=true
 # template --debug --dry-run
 
 helm upgrade -i orc8r orc8r/cloud/helm/orc8r \
-  --set nginx.image.repository=shubhamtatvamasi/nginx \
-  --set nginx.image.tag=b4fbd71 \
+  --set nginx.image.repository=shiveshwavelabs/nginx \
+  --set nginx.image.tag=master-feb \
   --set nginx.spec.hostname=controller.${DOMAIN_NAME} \
   --set nms.certs.enabled=${CERTS_CHART} \
   --set certs.domainName=${DOMAIN_NAME} \

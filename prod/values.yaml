@@ -1,8 +1,8 @@
 nms:
   magmalte:
     image:
-      repository: magmacore/magmalte
-      tag: 1.6.1
+      repository: shiveshwavelabs/magmalte
+      tag: master-feb
       pullPolicy: IfNotPresent
 
     env:
@@ -26,8 +26,8 @@ nginx:
   replicas: 1
 
   image:
-    repository: magmacore/nginx
-    tag: 1.6.1
+    repository: shiveshwavelabs/nginx
+    tag: master-feb
 
   spec:
     hostname:
@@ -40,8 +40,8 @@ controller:
   replicas: 1
 
   image:
-    repository: magmacore/controller
-    tag: 1.6.1
+    repository: shiveshwavelabs/controller
+    tag: master-feb
 
 metrics:
   prometheus:
